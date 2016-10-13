@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+    defaultConfig {
+        applicationId "com.renyu"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [ pushAppId:"H90VmyryUR7Ly31syUYLs2",
+                                     pushAppKey:"ooLl9fe4v4AnjYqWMoI2G",
+                                     pushAppSecret:"FHn9B7OdBj6DTlhrURVIx6",
+                                     JPUSH_APPKEY:"de8623059228f3e2152f6eb9",
+                                     JPUSH_CHANNEL:"developer-default",
+                                     UMENG_APPKEY:"546701cafd98c50daa001282",
+                                     UMENG_MESSAGE_SECRET:"c2b96a109868ad08123b0ba65179884b"]
+
+            buildConfigField "String", "ACCESSID", "\"2100007295\""
+            buildConfigField "String", "ACCESSKEY", "\"A7291PBT8QAL\""
+
+            buildConfigField "String", "MI_APP_ID", "\"2882303761517515345\""
+            buildConfigField "String", "MI_APP_KEY", "\"5111751578345\""
+        }
+        debug {
+            manifestPlaceholders = [ pushAppId:"H90VmyryUR7Ly31syUYLs2",
+                                     pushAppKey:"ooLl9fe4v4AnjYqWMoI2G",
+                                     pushAppSecret:"FHn9B7OdBj6DTlhrURVIx6",
+                                     JPUSH_APPKEY:"de8623059228f3e2152f6eb9",
+                                     JPUSH_CHANNEL:"developer-default",
+                                     UMENG_APPKEY:"546701cafd98c50daa001282",
+                                     UMENG_MESSAGE_SECRET:"c2b96a109868ad08123b0ba65179884b"]
+
+            buildConfigField "String", "ACCESSID", "\"2100007295\""
+            buildConfigField "String", "ACCESSKEY", "\"A7291PBT8QAL\""
+
+            buildConfigField "String", "MI_APP_ID", "\"2882303761517515345\""
+            buildConfigField "String", "MI_APP_KEY", "\"5111751578345\""
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile project(':pushmodule')
+}

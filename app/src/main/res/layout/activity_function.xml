@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:text="设置别名"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_set_alias"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintRight_toLeftOf="@+id/button_unset_alias"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_unset_alias" />
+
+    <Button
+        android:text="撤销别名"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_unset_alias"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintVertical_bias="0.14"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp" />
+
+    <Button
+        android:text="设置账号"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_set_account"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_unset_alias"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/button_unset_alias"
+        android:layout_marginLeft="8dp" />
+
+    <Button
+        android:text="撤销账号"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_unset_account"
+        app:layout_constraintLeft_toLeftOf="@+id/button_set_alias"
+        app:layout_constraintRight_toRightOf="@+id/button_set_alias"
+        android:layout_marginTop="56dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_set_alias"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <Button
+        android:text="订阅标签"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_subscribe_topic"
+        app:layout_constraintLeft_toLeftOf="@+id/button_unset_alias"
+        app:layout_constraintTop_toTopOf="@+id/button_unset_account" />
+
+    <Button
+        android:text="撤销标签"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_unsubscribe_topic"
+        app:layout_constraintTop_toTopOf="@+id/button_subscribe_topic"
+        app:layout_constraintLeft_toLeftOf="@+id/button_set_account" />
+
+    <Button
+        android:text="接收时间"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_set_accept_time"
+        android:layout_marginTop="56dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_unset_account"
+        app:layout_constraintLeft_toLeftOf="@+id/button_unset_account" />
+
+    <Button
+        android:text="暂停推送"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_pause_push"
+        app:layout_constraintLeft_toLeftOf="@+id/button_subscribe_topic"
+        app:layout_constraintTop_toTopOf="@+id/button_set_accept_time" />
+
+    <Button
+        android:text="恢复推送"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_resume_push"
+        app:layout_constraintLeft_toLeftOf="@+id/button_unsubscribe_topic"
+        app:layout_constraintTop_toTopOf="@+id/button_pause_push" />
+</android.support.constraint.ConstraintLayout>
