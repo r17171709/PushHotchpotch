@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.renyu.push.BuildConfig;
 import com.renyu.push.PushApplication;
 import com.renyu.push.R;
 
@@ -29,13 +30,13 @@ public class XGFunctionActivity extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button_set_alias:
-//                ((PushApplication) getApplication()).xgUtils.registWithAccount(Long.parseLong(BuildConfig.ACCESSID), BuildConfig.ACCESSKEY, "alias");
+                ((PushApplication) getApplication()).xgUtils.registWithAccount(Long.parseLong(BuildConfig.ACCESSID), BuildConfig.ACCESSKEY, "alias");
                 break;
             case R.id.button_unset_alias:
                 ((PushApplication) getApplication()).xgUtils.unBindAccount();
                 break;
             case R.id.button_set_account:
-//                ((PushApplication) getApplication()).xgUtils.registWithAccount(Long.parseLong(BuildConfig.ACCESSID), BuildConfig.ACCESSKEY, "alias");
+                ((PushApplication) getApplication()).xgUtils.registWithAccount(Long.parseLong(BuildConfig.ACCESSID), BuildConfig.ACCESSKEY, "alias");
                 break;
             case R.id.button_unset_account:
                 ((PushApplication) getApplication()).xgUtils.unBindAccount();

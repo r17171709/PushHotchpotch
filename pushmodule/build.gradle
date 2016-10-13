@@ -17,6 +17,35 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            manifestPlaceholders = [ pushAppId:"",
+                                     pushAppKey:"",
+                                     pushAppSecret:"",
+                                     JPUSH_APPKEY:"",
+                                     JPUSH_CHANNEL:"",
+                                     UMENG_APPKEY:"",
+                                     UMENG_MESSAGE_SECRET:""]
+
+            buildConfigField "String", "ACCESSID", "\"\""
+            buildConfigField "String", "ACCESSKEY", "\"\""
+
+            buildConfigField "String", "MI_APP_ID", "\"\""
+            buildConfigField "String", "MI_APP_KEY", "\"\""
+        }
+        debug {
+            manifestPlaceholders = [ pushAppId:"",
+                                     pushAppKey:"",
+                                     pushAppSecret:"",
+                                     JPUSH_APPKEY:"",
+                                     JPUSH_CHANNEL:"",
+                                     UMENG_APPKEY:"",
+                                     UMENG_MESSAGE_SECRET:""]
+
+            buildConfigField "String", "ACCESSID", "\"\""
+            buildConfigField "String", "ACCESSKEY", "\"\""
+
+            buildConfigField "String", "MI_APP_ID", "\"\""
+            buildConfigField "String", "MI_APP_KEY", "\"\""
         }
     }
     lintOptions {

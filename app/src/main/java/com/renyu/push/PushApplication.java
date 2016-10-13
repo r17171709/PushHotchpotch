@@ -35,7 +35,7 @@ public class PushApplication extends Application {
             //开启debug模式
             miUtils.enableDebug();
             //注册
-//            miUtils.registerPush(BuildConfig.MI_APP_ID, BuildConfig.MI_APP_KEY);
+            miUtils.registerPush(BuildConfig.MI_APP_ID, BuildConfig.MI_APP_KEY);
 
             //极光推送
 //            jUtils=JUtils.getInstance(this);
